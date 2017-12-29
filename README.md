@@ -1,2 +1,2 @@
-##SSDS: Particle Electron + Losant
-###Remote telemetry
+## Particle Electron + Losant
+### Remote telemetry 

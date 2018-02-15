@@ -8,7 +8,6 @@ PRODUCT_VERSION(2);
 
 STARTUP(System.enableFeature(FEATURE_RETAINED_MEMORY));
 SYSTEM_MODE(SEMI_AUTOMATIC);
-SYSTEM_THREAD(ENABLED);
 
 #define VFD_ON    LOW
 #define VFD_OFF   HIGH
@@ -105,7 +104,7 @@ void loop()
   syncTime();
   publishData();
 
-  System.sleep({FLOW_PIN, VFD_PIN}, CHANGE, SLEEP_INTERVAL, SLEEP_NETWORK_STANDBY);
+  System.sleep(FLOW_PIN, CHANGE, SLEEP_INTERVAL, SLEEP_NETWORK_STANDBY);
   //sleep for SLEEP_INTERVAL, wake on VFD_PIN or FLOW_PIN change
 }
 
